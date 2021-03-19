@@ -166,4 +166,14 @@ VALUES (1, 1, true),
   (2, 1, false),
   (3, 2, true);
 /*  */
+SELECT *
+FROM "users"
+WHERE "is_male" = false;
+SELECT *
+FROM "users"
+WHERE "is_male" = true;
 
+SELECT *,
+  char_length(concat("first_name", ' ', "last_name")) AS "Full Name"
+FROM "users"
+WHERE char_length(concat("first_name", ' ', "last_name")) > 15;
